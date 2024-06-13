@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	  
+    <title>Hack Dating -Test</title>
+	  
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      #filters {
+        margin-bottom: 20px;
+      }
+
+      fieldset {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="checkbox"] {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      .activity {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+
+      .activity:hover {
+        background-color: #e9e9e9;
+      }
+    </style>
+  </head>
+  <body style="background-color:PowderBlue">
+
+    <div class="container-fluid border" style="background-color:PowderBlue">
+      <img src="1Logo.png" alt="Campus Explorer Logo" width="200 px" height="200 px" class="pt-1 pb-1">
+
+      <ul class="nav nav-tabs pr-5 pt-1" style="float:right" >
+        <li class="nav-item">
+          <a class="nav-link text-body" href="start.html">Activities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-body" href="Restaurants_Tab.html">Restaurants</a>
+        </li>
+        <li>
+          <a class="nav-link text-body" href="Suggestion.html">Suggestion Form</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="filters">
+      <div class="row pt-3">
+        <div class="col-6">
+
+          <div class="pl-3">
+          <h3>Cost:</h3>
+          <label><input type="checkbox" class="filter cost" value="Free"> Free</label>
+          <label><input type="checkbox" class="filter cost" value="$0-10"> $0-10</label>
+          <label><input type="checkbox" class="filter cost" value="$11-20"> $11-20</label>
+          <label><input type="checkbox" class="filter cost" value="$21-30"> $21-30</label>
+          <label><input type="checkbox" class="filter cost" value="$31-40"> $31-40</label>
+          <label><input type="checkbox" class="filter cost" value="$41-50"> $41-50</label>
+          <label><input type="checkbox" class="filter cost" value="$51-75"> $51-75</label>
+          <label><input type="checkbox" class="filter cost" value="$76-100"> $76-100</label>
+          <label><input type="checkbox" class="filter cost" value="$101-200"> $101-200</label>
+          <label><input type="checkbox" class="filter cost" value="$201+"> $201+</label>
+          </div>
+
+          <div class="pl-3">
+          <h3>Duration:</h3>
+          <label><input type="checkbox" class="filter duration" value="15 min"> 15 min</label>
+          <label><input type="checkbox" class="filter duration" value="30 min"> 30 min</label>
+          <label><input type="checkbox" class="filter duration" value="45 min"> 45 min</label>
+          <label><input type="checkbox" class="filter duration" value="1 hour"> 1 hour</label>
+          <label><input type="checkbox" class="filter duration" value="1.5 hours"> 1.5 hours</label>
+          <label><input type="checkbox" class="filter duration" value="2 hours"> 2 hours</label>
+          <label><input type="checkbox" class="filter duration" value="3 hours"> 3 hours</label>
+          <label><input type="checkbox" class="filter duration" value="4 hours"> 4 hours</label>
+          <label><input type="checkbox" class="filter duration" value="5+ hours"> 5+ hours</label>
+          </div>
+
+          <div class="pl-3">
+          <h3>Type:</h3>
+          <label><input type="checkbox" class="filter type" value="Indoor"> Indoor</label>
+          <label><input type="checkbox" class="filter type" value="Outdoor"> Outdoor</label>
+          </div>
+        </div>
+        <div class="col-6">
+
+          <h3>Adventure Level:</h3>
+          <label><input type="checkbox" class="filter adv" value="1"> 1</label>
+          <label><input type="checkbox" class="filter adv" value="2"> 2</label>
+          <label><input type="checkbox" class="filter adv" value="3"> 3</label>
+          <label><input type="checkbox" class="filter adv" value="4"> 4</label>
+          <label><input type="checkbox" class="filter adv" value="5"> 5</label>
+          <label><input type="checkbox" class="filter adv" value="6"> 6</label>
+          <label><input type="checkbox" class="filter adv" value="7"> 7</label>
+          <label><input type="checkbox" class="filter adv" value="8"> 8</label>
+          <label><input type="checkbox" class="filter adv" value="9"> 9</label>
+          <label><input type="checkbox" class="filter adv" value="10"> 10</label>
+
+          <h3>Season:</h3>
+          <label><input type="checkbox" class="filter season" value="Summer"> Summer</label>
+          <label><input type="checkbox" class="filter season" value="Winter"> Winter</label>
+          <label><input type="checkbox" class="filter season" value="Holiday"> Holiday</label>
+
+          <h3>Distance From Campus:</h3>
+          <label><input type="checkbox" class="filter distance" value="0"> 0 min</label>
+          <label><input type="checkbox" class="filter distance" value="5"> 5 min</label>
+          <label><input type="checkbox" class="filter distance" value="10"> 10 min</label>
+          <label><input type="checkbox" class="filter distance" value="15"> 15 min</label>
+          <label><input type="checkbox" class="filter distance" value="20"> 20 min</label>
+          <label><input type="checkbox" class="filter distance" value="30"> 30 min</label>
+          <label><input type="checkbox" class="filter distance" value="45"> 45 min</label>
+          <label><input type="checkbox" class="filter distance" value="1"> 1 hour</label>
+          <label><input type="checkbox" class="filter distance" value="1.5"> 1.5 hours</label>
+          <label><input type="checkbox" class="filter distance" value="2"> 2+ hours</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="data">
+      <h3 class="pl-3">Activities</h3>
+        <div class="container-fluid">
+          <div class="card-columns">
+            <div class="activity text-muted" 
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$11-20" 
+                 data-duration="1 hour,1.5 hours,2 hours" 
+                 data-type="Outdoor" 
+                 data-adv="4" 
+                 data-season="Summer,Winter" 
+                 data-distance="15">
+            <div class="card" style="background-color:LightGoldenRodYellow">
+              <div class="card-body text-center">
+                <a href="America_West.html" class="stretched-link">
+                  <p class="card-text text-muted">American West Heritage Center</p>
+                </a>
+              </div>
+            </div>
+            </div>
+
+            <div class="activity text-muted"
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$0-10"
+                 data-duration="30min,1hour"
+                 data-type="Indoor"
+                 data-adv="2"
+                 data-season="Summer,Winter"
+                 data-distance="10,15,30,45,1">
+            <div class="card" style="background-color:LightGoldenRodYellow">
+              <div class="card-body text-center">
+                <a href="Animal_Shelter.html" class="stretched-link"></a>
+                  <p class="card-text text-muted">Animal Shelter</p>
+              </div>
+            </div>
+            </div>
+
+            <div class="activity text-muted"
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$0-10"
+                 data-duration="30min,1hour,2hours"
+                 data-type="Indoor"
+                 data-adv="4"
+                 data-season="Summer,Winter"
+                 data-distance="10,15,30,45,1">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <a href="Antique_Hunting.html" class="stretched-link">
+                    <p class="card-text text-muted">Antique Hunting</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted"
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$11-20,$21-30"
+                 data-duration="1hour,1.5hours,2hours,3hours,4hours"
+                 data-type="Indoor"
+                 data-adv="3"
+                 data-season="Summer,Winter"
+                 data-distance="1,1.5,2">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <a href="Aquarium.html" class="stretched-link">
+                    <p class="card-text text-muted">Aquarium</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted"
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$11-20"
+                 data-duration="1hour,2hours,3hours"
+                 data-type="Indoor"
+                 data-adv="2"
+                 data-season="Summer,Winter"
+                 data-distance="10,1,1.5,2">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <a href="Arcade.html" class="stretched-link">
+                    <p class="card-text text-muted">Arcade</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted"
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$51-75"
+                 data-duration="1hour,2hours"
+                 data-type="Indoor,Outdoor"
+                 data-adv="6"
+                 data-season="Summer,Winter"
+                 data-distance="10,15,45,1">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <a href="Archery.html" class="stretched-link">
+                    <p class="card-text text-muted">Archery</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted"
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="Free"
+                 data-duration="45min,1hour,1.5hours"
+                 data-type="Indoor"
+                 data-adv="3"
+                 data-season="Summer,Winter"
+                 data-distance="10">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <a href="Attend_Open_House.html" class="stretched-link">
+                    <p class="card-text text-muted">Attend an Open House</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted"
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$21-30"
+                 data-duration="45min,1hour,1.5hours"
+                 data-type="Indoor,Outdoor"
+                 data-adv="6"
+                 data-season="Summer,Winter"
+                 data-distance="5,1,1.5,2">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <a href="Axe_Throwing.html" class="stretched-link">
+                    <p class="card-text text-muted">Axe Throwing</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+			<a href="Baking.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="45min,1hour,1.5hours"
+                   data-type="Indoor"
+                   data-adv="3"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Baking</p>
+                  </div>
+                </div>
+              </div>
+			</a>
+			  
+			<a href="BBQ.html">  
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30,$31-40"
+                   data-duration="1hour,2hours"
+                   data-type="Outdoor"
+                   data-adv="3"
+                   data-season="Summer"
+                   data-distance="0,10,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">BBQ</p>
+                  </div>
+                </div>
+              </div>
+			</a>
+
+			<a href="Beach.html">   
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="1hour,1.5hours,2hours,3hours,4hours"
+                   data-type="Outdoor"
+                   data-adv="5"
+                   data-season="Summer"
+                   data-distance="10,30,1,1.5,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Beach</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+				
+			<a href="Binge_TV.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="2 hours,3 hours,4 hours,5+ hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Binge TV Show</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Bowling.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="1 hour,2 hours"
+                   data-type="Indoor"
+                   data-adv="3"
+                   data-season="Summer,Winter"
+                   data-distance="5,10,30,1,1.5,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Bowling</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Build_A_Snowman.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="15 min,30 min,45 min,1 hour"
+                   data-type="Outdoor"
+                   data-adv="5"
+                   data-season="Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Build a Snowman</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Canoeing.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="1 hour,2 hours"
+                   data-type="Outdoor"
+                   data-adv="7"
+                   data-season="Summer"
+                   data-distance="5,30,1,1.5,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Canoeing</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Casino_Night.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="1 hour,2 hours,3 hours"
+                   data-type="Indoor"
+                   data-adv="4"
+                   data-season="Summer,Winter"
+                   data-distance="0,5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Casino Night</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Chopped.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="45 min,1 hour,1.5 hours,2 hours"
+                   data-type="Indoor"
+                   data-adv="4"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Chopped Challenge</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Cinema.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="1.5 hours,2 hours,3 hours"
+                   data-type="Indoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="5,10,15,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Cinema</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Climbing.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="1.5 hours,2 hours,3 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="7"
+                   data-season="Summer,Winter"
+                   data-distance="0,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Climbing</p>
+                  </div>
+                </div>
+              </div>
+			</a>
+
+			<a href="Comedy_Show.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20,$21-30,$31-40"
+                   data-duration="1 hour,2 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="4"
+                   data-season="Summer,Winter"
+                   data-distance="5,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Comedy Show</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Concert.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$101-200,$201+"
+                   data-duration="1.5 hours,2 hours,3 hours,4 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="5"
+                   data-season="Summer,Winter"
+                   data-distance="10,1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Concert</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Cook_Something_New.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="20 min,45 min,1 hour,1.5 hours,2 hours"
+                   data-type="Indoor"
+                   data-adv="3"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Cook Something New</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Cookies.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="30 min,1 hour"
+                   data-type="Indoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Cookies</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Create_A_Commercial.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="15 min,30 min,45 min,1 hour,1.5 hours"
+                   data-type="Indoor"
+                   data-adv="4"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Create a Made-up Commercial</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Darts.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="30 min,45 min,1 hour"
+                   data-type="Indoor,Outdoor"
+                   data-adv="5"
+                   data-season="Summer,Winter"
+                   data-distance="0,5,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Darts</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Day_Trip.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="2 hours,3 hours,4 hours,5+ hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="7"
+                   data-season="Summer,Winter"
+                   data-distance="1,1.5,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Day Trip</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Dessert.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="15 min,30 min,45 min"
+                   data-type="Indoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Dessert</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Disc_Golf.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="30 min,1 hour,1.5 hours,2 hours"
+                   data-type="Outdoor"
+                   data-adv="7"
+                   data-season="Summer,Winter"
+                   data-distance="10,15,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Disc Golf</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="DIY_Pottery.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$31-40"
+                   data-duration="30 min,1 hour,1.5 hours,2 hours"
+                   data-type="Indoor"
+                   data-adv="4"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">DIY Pottery</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Dollar_Menu_Dining.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="30 min,1 hour"
+                   data-type="Indoor"
+                   data-adv="4"
+                   data-season="Summer,Winter"
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Dollar Menu Dining</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Drive.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="15 min,30 min,45 min,1 hour"
+                   data-type="Indoor,Outdoor"
+                   data-adv="5"
+                   data-season="Summer,Winter"
+                   data-distance="30,45,1,1.5,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Drive</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Drive-in_Movie.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30,$31-40"
+                   data-duration="1.5 hours,2 hours,3 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="5"
+                   data-season="Summer"
+                   data-distance="1.5,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Drive-in Movie</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Escape_Room.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$41-50,$51-75"
+                   data-duration="1 hour,2 hours,3 hours"
+                   data-type="Indoor"
+                   data-adv="6"
+                   data-season="Summer,Winter"
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Escape Room</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Exercise_Class.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="30 min,1 hour,1.5 hours,2 hours"
+                   data-type="Indoor"
+                   data-adv="6"
+                   data-season="Summer,Winter"
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Exercise Class</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Exotic_Dining.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$31-40"
+                   data-duration="1 hour,1.5 hours,2 hours"
+                   data-type="Indoor"
+                   data-adv="6"
+                   data-season="Summer,Winter"
+                   data-distance="5,10,15,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Exotic Dining</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Explore.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="30 min,1 hour,1.5 hours,2 hours"
+                   data-type="Outdoor"
+                   data-adv="7"
+                   data-season="Summer,Winter"
+                   data-distance="5,10,15,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Explore a New Part of Town</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Farmers_Market.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours,3 hours"
+                   data-type="Outdoor"
+                   data-adv="6"
+                   data-season="Summer"
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Farmers Market</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Food_Festival.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="45 min,1 hour,1.5 hours,2 hours"
+                   data-type="Outdoor"
+                   data-adv="5"
+                   data-season="Summer"
+                   data-distance="10,20,30,45,1,1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Food Festival</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Food_Truck_Tour.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="45 min,1 hour,1.5 hours,2 hours"
+                   data-type="Outdoor"
+                   data-adv="4"
+                   data-season="Summer,Winter"
+                   data-distance="10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Food Truck Tour</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Fort.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="15 min,30 min,45 min,1 hour"
+                   data-type="Indoor"
+                   data-adv="5"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Fort</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Fruit_Picking.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="30 min,1 hour,1.5 hours,2 hours"
+                   data-type="Outdoor"
+                   data-adv="5"
+                   data-season="Summer"
+                   data-distance="5,10,15">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Fruit Picking</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Game_Night.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="30 min,1 hour,1.5 hours,2 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="3"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Game Night</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Gift_Giving.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="15 min,30 min,45 min,1 hour"
+                   data-type="Indoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Get Each Other a Gift</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Glass_Blowing.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$51-75,$76-100"
+                   data-duration="1 hour,1.5 hours,2 hours,3 hours,4 hours"
+                   data-type="Indoor"
+                   data-adv="6"
+                   data-season="Summer,Winter"
+                   data-distance="1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Glass Blowing</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Go-Kart.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30"
+                   data-duration="45 min,1 hour,1.5 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="6"
+                   data-season="Summer,Winter"
+                   data-distance="45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Go-kart</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Golf.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$31-40"
+                   data-duration="1 hour,1.5 hours,2 hours,3 hours,4 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="5"
+                   data-season="Summer,Winter"
+                   data-distance="10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Golf</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Hammocking.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10"
+                   data-duration="1 hour,2 hours"
+                   data-type="Outdoor"
+                   data-adv="5"
+                   data-season="Summer"
+                   data-distance="5,10,15,20,30">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Hammocking</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Haunted_Tour.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$31-40"
+                   data-duration="2 hours"
+                   data-type="Indoor"
+                   data-adv="5"
+                   data-season="Holiday"
+                   data-distance="10,15,20,30">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Haunted Tour</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Hide_N_Seek.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="30 min"
+                   data-type="Indoor,Outdoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Hide 'n Seek</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Hike.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="1 hour,2 hours"
+                   data-type="Outdoor"
+                   data-adv="6"
+                   data-season="Summer"
+                   data-distance="10,15,20,30">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Hike</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Hockey_Game.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10"
+                   data-duration="2 hours,3 hours"
+                   data-type="Indoor"
+                   data-adv="3"
+                   data-season="Winter"
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Hockey Game</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Homemade_Cookies.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10"
+                   data-duration="1 hour,2 hours"
+                   data-type="Indoor"
+                   data-adv="1"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Homemade Cookies</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Horseback_Riding.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$201+"
+                   data-duration="2 hours,3 hours"
+                   data-type="Outdoor"
+                   data-adv="6"
+                   data-season="Summer"
+                   data-distance="20,30,45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Horseback Riding</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Hot_Air_Balloon.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$201+"
+                   data-duration="2 hours"
+                   data-type="Outdoor"
+                   data-adv="8"
+                   data-season="Summer"
+                   data-distance="30,45,1">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Hot Air Balloon</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Hot_Springs.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="1 hour,2 hours,3 hours"
+                   data-type="Outdoor"
+                   data-adv="3"
+                   data-season="Summer,Winter"
+                   data-distance="30,45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Hot Springs</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+			<a href="Hot_Tubbing.html">	
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10"
+                   data-duration="1 hour"
+                   data-type="Outdoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="30,45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Hot Tubbing</p>
+                  </div>
+                </div>
+              </div>
+			</a>	
+
+            <a href="Ice_Cream.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10"
+                   data-duration="30 min,45 min,1 hour"
+                   data-type="Indoor,Outdoor"
+                   data-adv="1"
+                   data-season="Summer,Winter"
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Ice Cream</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Ice_Skating.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20"
+                   data-duration="1 hour,1.5 hours,2 hours"
+                   data-type="Indoor,Outdoor"
+                   data-adv="4"
+                   data-season="Winter,Summer"
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Ice Skating</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Improv.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free"
+                   data-duration="1 hour"
+                   data-type="Indoor,Outdoor"
+                   data-adv="2"
+                   data-season="Summer,Winter"
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Improv</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Indoor_Skydiving.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$51-75"
+                   data-duration="1 hour"
+                   data-type="Indoor"
+                   data-adv="8"
+                   data-season="Summer,Winter"
+                   data-distance="1">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Indoor Skydiving</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Jet_Ski.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$101-200,$201+"
+                   data-duration="1 hour,2 hours,3 hours,4 hours,5+ hours"
+                   data-type="Outdoor"
+                   data-adv="7"
+                   data-season="Summer"
+                   data-distance="30,1,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Jet Ski</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Jewelry_Making.html">
+              <div class="activity text-muted"
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$101-200,$201+"
+                   data-duration="2 hours,3 hours"
+                   data-type="Indoor"
+                   data-adv="3"
+                   data-season="Summer,Winter"
+                   data-distance="20,1,2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Jewelry Making</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Kareoke.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Indoor" 
+                   data-adv="4" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+               <div class="card" style="background-color:LightGoldenRodYellow">
+                 <div class="card-body text-center">
+                   <p class="card-text text-muted">Karaoke</p>
+                 </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Kickboxing.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$51-75" 
+                   data-duration="2 hours" 
+                   data-type="Indoor" 
+                   data-adv="5" 
+                   data-season="Summer,Winter" 
+                   data-distance="20">
+               <div class="card" style="background-color:LightGoldenRodYellow">
+                 <div class="card-body text-center">
+                   <p class="card-text text-muted">Kickboxing Class</p>
+                 </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Lagoon.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$201+" 
+                   data-duration="4 hours,5+ hours" 
+                   data-type="Outdoor" 
+                   data-adv="7" 
+                   data-season="Summer" 
+                   data-distance="1,1.5">
+                 <div class="card" style="background-color:LightGoldenRodYellow">
+                   <div class="card-body text-center">
+                     <p class="card-text text-muted">Lagoon</p>
+                   </div>
+                 </div>
+              </div>
+            </a>
+
+            <a href="Laser_Tag.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20,$21-30" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="4" 
+                   data-season="Summer,Winter" 
+                   data-distance="5,45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Laser Tag</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Learn_A_New_Skill.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$0-10,$11-20,$21-30" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="1,2,3,4,5,6" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,5,10,15,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Learn a New Skill</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Listen_To_A_Podcast.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="1 hour" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Listen to a Podcast</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Look_Through_Photos.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="1 hour,15 min,30 min,45 min" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Look Through Old Photos</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="activity text-muted" 
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$21-30" 
+                 data-duration="1 hour" 
+                 data-type="Outdoor" 
+                 data-adv="3" 
+                 data-season="Summer" 
+                 data-distance="30">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <p class="card-text text-muted">Luau</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="Magic_Show.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$101-200,$201+" 
+                   data-duration="1 hour,30 min,45 min" 
+                   data-type="Indoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Magic Show</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Make_A_Playlist.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Make a Playlist</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="activity text-muted" 
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="Free" 
+                 data-duration="1 hour" 
+                 data-type="Indoor" 
+                 data-adv="1" 
+                 data-season="Summer,Winter" 
+                 data-distance="0">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <p class="card-text text-muted">Make a Powerpoint</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted" 
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="Free" 
+                 data-duration="45 min" 
+                 data-type="Indoor" 
+                 data-adv="1" 
+                 data-season="Summer,Winter" 
+                 data-distance="0">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <p class="card-text text-muted">Make a TikTok</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted" 
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="$0-10" 
+                 data-duration="1 hour" 
+                 data-type="Indoor,Outdoor" 
+                 data-adv="1" 
+                 data-season="Holiday" 
+                 data-distance="0">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <p class="card-text text-muted">Make Homemade Holiday Decorations</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity text-muted" 
+                 style="background-color:LightGoldenRodYellow"
+                 data-cost="Free" 
+                 data-duration="1 hour" 
+                 data-type="Indoor" 
+                 data-adv="1" 
+                 data-season="Summer,Winter" 
+                 data-distance="10">
+              <div class="card" style="background-color:LightGoldenRodYellow">
+                <div class="card-body text-center">
+                  <p class="card-text text-muted">Mall</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="Mini_Golf.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10,$11-20" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="10,45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Mini Golf</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Murder_Mystery_Dinner.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30,$31-40,$41-50,$51-75,$76-100,$101-200" 
+                   data-duration="3 hours" 
+                   data-type="Indoor" 
+                   data-adv="3" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Murder Mystery Dinner</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Museum.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Museum</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Nerf_War.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$101-200,$201+" 
+                   data-duration="1 hour,1.5 hours" 
+                   data-type="Indoor" 
+                   data-adv="4" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Nerf War</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Nightclubbing.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20" 
+                   data-duration="1 hour,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="5" 
+                   data-season="Summer,Winter" 
+                   data-distance="1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Nightclubbing</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Observatory.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Observatory</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Obstacle_Course.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$0-10" 
+                   data-duration="1 hour" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="4" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,5,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Obstacle Course</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Paint.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10" 
+                   data-duration="1 hour,2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Paint</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Paintball.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20" 
+                   data-duration="2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="6" 
+                   data-season="Summer,Winter" 
+                   data-distance="20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Paintball</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Photoshoot.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="1 hour" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Photoshoot</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Picnic.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20" 
+                   data-duration="1 hour,2 hours" 
+                   data-type="Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer" 
+                   data-distance="10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Picnic</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Planetarium.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20" 
+                   data-duration="1 hour" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Planetarium</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Plant_A_Garden.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Plant a Garden</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Psychic.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20,$51-75,$101-200" 
+                   data-duration="45 min,1 hour,1.5 hours" 
+                   data-type="Indoor" 
+                   data-adv="7" 
+                   data-season="Summer,Winter" 
+                   data-distance="45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Psychic</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Puppy_Store.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="15 min,30 min,45 min,1 hour" 
+                   data-type="Indoor" 
+                   data-adv="3" 
+                   data-season="Summer,Winter" 
+                   data-distance="1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Puppy Store</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Puzzle.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$0-10,$11-20" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Puzzle</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+            <a href="Quiz_Night.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="15 min,30 min,45 min,1 hour" 
+                   data-type="Indoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Quiz Night</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Racquetball.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$31-40" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="7" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Racquetball</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Read_To_One_Another.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Read to One Another</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Ride_Bikes.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$0-10" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Outdoor" 
+                   data-adv="8" 
+                   data-season="Summer" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Ride Bikes</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="River_Rafting.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$101-200" 
+                   data-duration="2 hours,3 hours,4 hours,5+ hours" 
+                   data-type="Outdoor" 
+                   data-adv="10" 
+                   data-season="Summer" 
+                   data-distance="2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">River Rafting</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Rock_Climbing.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$11-20" 
+                   data-duration="1 hour,1.5 hours,2 hours,3 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="10" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,5,10,20,30,45,1">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Rock Climbing</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Roller_Skating.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="5" 
+                   data-season="Summer,Winter" 
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Roller Skating</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Rowboat.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$76-100" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Outdoor" 
+                   data-adv="4" 
+                   data-season="Summer" 
+                   data-distance="30,45,1,1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Rowboat</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Scavenger_Hunt.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$0-10" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="5" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Scavenger Hunt</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Sit_By_The_Water.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="15 min,30 min,45 min,1 hour" 
+                   data-type="Outdoor" 
+                   data-adv="1" 
+                   data-season="Summer" 
+                   data-distance="30,45,1,1.5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Sit by the Water</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Skiing.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$101-200" 
+                   data-duration="4 hours,5+ hours" 
+                   data-type="Outdoor" 
+                   data-adv="9" 
+                   data-season="Winter" 
+                   data-distance="45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Skiing</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Skydive.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$201+" 
+                   data-duration="4 hours" 
+                   data-type="Outdoor" 
+                   data-adv="10" 
+                   data-season="Summer" 
+                   data-distance="2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Skydive</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Sledding.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$11-20,$21-30" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Outdoor" 
+                   data-adv="6" 
+                   data-season="Winter" 
+                   data-distance="0,5,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Sledding</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Smores.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10" 
+                   data-duration="45 min,1 hour,1.5 hours" 
+                   data-type="Outdoor" 
+                   data-adv="3" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">S'mores</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Scuba_Diving.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$76-100,$201+" 
+                   data-duration="1 hour,1.5 hours,2 hours,3 hours" 
+                   data-type="Outdoor" 
+                   data-adv="9" 
+                   data-season="Summer" 
+                   data-distance="2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Snorkeling/Scuba Diving</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Spa_Day.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$51-75,$76-100,$101-200" 
+                   data-duration="2 hours,3 hours" 
+                   data-type="Indoor" 
+                   data-adv="3" 
+                   data-season="Summer,Winter" 
+                   data-distance="5,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Spa Day</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Stargaze.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,5,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Stargaze</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Start_A_Blog.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min,45 min,1 hour" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Start a Blog</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Swimming.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$11-20" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="4" 
+                   data-season="Summer,Winter" 
+                   data-distance="0,5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Swimming</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Swing_Dancing.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="1 hour,1.5 hours,2 hours,3 hours" 
+                   data-type="Indoor" 
+                   data-adv="4" 
+                   data-season="Summer,Winter" 
+                   data-distance="10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Swing Dance</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Take_A_Photo_Walk.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours" 
+                   data-type="Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Take a Photo Walk</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Theater.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$31-40,$51-75,$76-100" 
+                   data-duration="2 hours" 
+                   data-type="Indoor" 
+                   data-adv="3" 
+                   data-season="Summer,Winter" 
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Theater</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Thrifting.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$0-10" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Thrifting</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Throw_A_Themed_Party.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10,$11-20,$21-30,$31-40,$41-50" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="5" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Throw a Themed Party</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Tie-dye.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10,$11-20" 
+                   data-duration="45 min,1 hour,1.5 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Tie-dye</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Trampoline_Park.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$31-40" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="6" 
+                   data-season="Summer,Winter" 
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Trampoline Park</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Tubing.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$21-30" 
+                   data-duration="1.5 hours,2 hours,3 hours" 
+                   data-type="Outdoor" 
+                   data-adv="5" 
+                   data-season="Summer" 
+                   data-distance="10,20">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Tubing</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+            <a href="Volunteer.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Volunteer</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Volleyball.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="45 min,1 hour,1.5 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="6" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Volleyball</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Video_Games.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Video Games</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Upcycling_Clothes.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10,$11-20" 
+                   data-duration="45 min,1 hour,1.5 hours" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Upcycling Clothes</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Waffle_Making.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$0-10" 
+                   data-duration="30min" 
+                   data-type="Indoor" 
+                   data-adv="1" 
+                   data-season="Summer,Winter" 
+                   data-distance="0">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Waffle Making</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Sunrise.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min" 
+                   data-type="Outdoor" 
+                   data-adv="1" 
+                   data-season="Summer" 
+                   data-distance="20,45">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Watch the Sunrise</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Sunset.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free" 
+                   data-duration="30 min" 
+                   data-type="Outdoor" 
+                   data-adv="1" 
+                   data-season="Summer" 
+                   data-distance="0,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Watch the Sunset</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Water_Park.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20" 
+                   data-duration="3 hours,4 hours,5+ hours" 
+                   data-type="Outdoor" 
+                   data-adv="5" 
+                   data-season="Summer" 
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Water Park</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Wine_Tasting.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$51-75,$76-100,$101-200" 
+                   data-duration="1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor" 
+                   data-adv="2" 
+                   data-season="Summer,Winter" 
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Wine Tasting</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Yard_Sales.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$0-10" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours" 
+                   data-type="Outdoor" 
+                   data-adv="2" 
+                   data-season="Summer" 
+                   data-distance="0,5,10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Yard Sales</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Yoga.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="Free,$31-40" 
+                   data-duration="30 min,45 min,1 hour,1.5 hours,2 hours" 
+                   data-type="Indoor,Outdoor" 
+                   data-adv="3" 
+                   data-season="Summer,Winter" 
+                   data-distance="5">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Yoga</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Zip_Lining.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$41-50,$51-75,$76-100,$101-200,$201+" 
+                   data-duration="1 hour,1.5 hours,2 hours,3 hours" 
+                   data-type="Outdoor" 
+                   data-adv="8" 
+                   data-season="Summer" 
+                   data-distance="2">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Zip Lining</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="Zoo.html">
+              <div class="activity text-muted" 
+                   style="background-color:LightGoldenRodYellow"
+                   data-cost="$11-20,$21-30" 
+                   data-duration="3 hours,4 hours,5+ hours" 
+                   data-type="Outdoor" 
+                   data-adv="3" 
+                   data-season="Summer,Winter,Holiday" 
+                   data-distance="10">
+                <div class="card" style="background-color:LightGoldenRodYellow">
+                  <div class="card-body text-center">
+                    <p class="card-text text-muted">Zoo</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.filter').forEach(function(filter) {
+            filter.addEventListener('change', function() {
+                filterData();
+            });
+        });
+
+function filterData() {
+    var costFilters = document.querySelectorAll('.filter.cost:checked');
+    var durationFilters = document.querySelectorAll('.filter.duration:checked');
+    var typeFilters = document.querySelectorAll('.filter.type:checked');
+    var advFilters = document.querySelectorAll('.filter.adv:checked');
+    var seasonFilters = document.querySelectorAll('.filter.season:checked');
+    var distanceFilters = document.querySelectorAll('.filter.distance:checked');
+
+    document.querySelectorAll('.activity').forEach(function(activity) {
+        var show = true;
+
+        if (costFilters.length > 0) {
+            show = Array.from(costFilters).some(function(costFilter) {
+                var costs = activity.getAttribute('data-cost').split(',');
+                return costs.includes(costFilter.value);
+            });
+        }
+
+        if (show && durationFilters.length > 0) {
+            show = Array.from(durationFilters).some(function(durationFilter) {
+                var durations = activity.getAttribute('data-duration').split(',');
+                return durations.includes(durationFilter.value);
+            });
+        }
+
+        if (show && typeFilters.length > 0) {
+            show = Array.from(typeFilters).some(function(typeFilter) {
+                var type = activity.getAttribute('data-type').split(',');
+                return type.includes(typeFilter.value);
+            });
+        }
+
+        if (show && advFilters.length > 0) {
+            show = Array.from(advFilters).some(function(advFilter) {
+                var adv = activity.getAttribute('data-adv').split(',');
+                return adv.includes(advFilter.value);
+            });
+        }
+
+        if (show && seasonFilters.length > 0) {
+            show = Array.from(seasonFilters).some(function(seasonFilter) {
+                var season = activity.getAttribute('data-season').split(',');
+                return season.includes(seasonFilter.value);
+            });
+        }
+
+        if (show && distanceFilters.length > 0) {
+            show = Array.from(distanceFilters).some(function(distanceFilter) {
+                var distance = activity.getAttribute('data-distance').split(',');
+                return distance.includes(distanceFilter.value);
+            });
+        }
+
+        activity.style.display = show ? 'block' : 'none';
+    });
+}
+
+    </script>  
+</body>
+</html>
