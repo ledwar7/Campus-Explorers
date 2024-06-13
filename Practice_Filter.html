@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Filtering</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+
+<!-- Example checkboxes -->
+<label>
+    <input type="checkbox" class="filter-checkbox" data-category="Free"> Free
+</label>
+<label>
+    <input type="checkbox" class="filter-checkbox" data-category="Paid"> Paid
+</label>
+<!-- Add more checkboxes as needed -->
+
+<!-- Example div elements to filter -->
+<div data-category="Free">This is Free content</div>
+<div data-category="Paid">This is Paid content</div>
+<!-- Add more div elements as needed -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkboxes = document.querySelectorAll('.filter-checkbox');
+
+        function filterContent() {
+            const selectedCategories = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.getAttribute('data-category'));
+
+            const allDivs = document.querySelectorAll('div[data-category]');
+
+            allDivs.forEach(div => {
+                const category = div.getAttribute('data-category');
+                div.style.display = selectedCategories.includes(category) ? 'block' : 'none';
+            });
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', filterContent);
+        });
+    });
+</script>
+
+</body>
+</html>
